@@ -41,8 +41,9 @@ export const Title = styled.h1`
 `;
 export const CardGroup = styled.div`
   display: flex;
-  margin: 10px 0px;
+  margin: 10px auto;
   justify-content: space-between;
+  max-width: 450px;
 `;
 
 export const Card = styled.div`
