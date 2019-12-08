@@ -3,48 +3,45 @@ import RangeSlider from '../../components/RangeSlider';
 import CustomButton from '../../components/CustomButton';
 import {round} from '../../helpers';
 
-import { Container, Title, CardGroup, Card, List } from './styles';
+import { Container, Title, Subtitle, CardGroup, Card, List } from './styles';
 
 export default function Home() {
-  const [qtd, setQtd] = useState(0);
+  const [valor, setValor] = useState(0);
 
   useEffect(() => {
-    console.log('qtd', qtd);
-  }, [qtd])
-
-  function handleOnChange(v) {
-    setQtd(v);
-  }
+    console.log('Valor', valor);
+  }, [valor])
 
   return (
     <Container>
-      <Title>De quanto você precisa?</Title>
+      <Subtitle className="orange"><strong>empréstimo pessoal para<br/> empregadas domésticas</strong></Subtitle>
+      <Title className="cyan">De quanto você precisa?</Title>
       <Card>
-        <p className="center">R$ {qtd.toString().replace(/\B(?=(\d{3})+\b)/g, ".")}</p>
+        <p className="center">R$ {valor.toString().replace(/\B(?=(\d{3})+\b)/g, ".")}</p>
         <RangeSlider 
-          qtd={qtd}
-          setQtd={setQtd}
+          valor={valor}
+          setValor={setValor}
         />
       </Card>
       <Card>
-        <p className="center orange">Valor aproximado das parcelas:</p>
+        <p className="center orange"><strong>Valor aproximado das parcelas:</strong></p>
         <CardGroup>
           <Card rounded={true}>
             <p className="cyan">6x de</p>
             <p className="cyan">
-              <strong>R$ {round(qtd/6)}</strong>
+              <strong>R$ {round(valor/6)}</strong>
             </p>
           </Card>
           <Card rounded={true}>
             <p className="cyan">12x de</p>
             <p className="cyan">
-              <strong>R$ {round(qtd/12)}</strong>
+              <strong>R$ {round(valor/12)}</strong>
             </p>
           </Card>
           <Card rounded={true}>
             <p className="cyan">18x de</p>
             <p className="cyan">
-              <strong>R$ {round(qtd/18)}</strong>
+              <strong>R$ {round(valor/18)}</strong>
             </p>
           </Card>
         </CardGroup>

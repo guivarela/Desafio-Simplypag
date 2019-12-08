@@ -34,11 +34,16 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   font-family: 'OpenSansBold';
-  color: #219e8e;
   text-align: center;
   max-width: 300px;
   margin: 20px auto 20px;
 `;
+
+export const Subtitle = styled.p`
+  font-family: 'OpenSansBold';
+  margin: 20px;
+`;
+
 export const CardGroup = styled.div`
   display: flex;
   margin: 10px auto;
@@ -64,10 +69,6 @@ export const Card = styled.div`
   span {
     font-size: 18px;
     color: #219e8e;
-  }
-  
-  strong {
-    font-family: 'OpenSansBold';
   }
 
   .center {

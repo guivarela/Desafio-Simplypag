@@ -64,6 +64,10 @@ h1 {
 h2 {
   font-size: 20px;
 }
+  
+strong {
+	font-family: 'OpenSansBold';
+}
 
 .orange {
 	color: #ee731c!important;

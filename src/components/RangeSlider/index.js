@@ -4,7 +4,7 @@ import 'react-rangeslider/lib/index.css';
 
 import { Container } from './styles';
 
-export default function RangeSlider({qtd, setQtd}) {
+export default function RangeSlider({valor, setValor}) {
   const [isMoving, setIsMoving] = useState(false);
 
   return (
@@ -13,11 +13,11 @@ export default function RangeSlider({qtd, setQtd}) {
         className={isMoving ? 'active' : ''}
         onChangeStart={() => setIsMoving(true)}
         onChangeComplete={() => setIsMoving(false)}
-        value={qtd}
+        value={valor}
         max={7000}
         step={100}
         tooltip={false}
-        onChange={(v) => setQtd(v)}
+        onChange={(v) => setValor(v)}
       />
     </Container>
   );
